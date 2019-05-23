@@ -4,7 +4,7 @@ function(ValidationBase) {
     
     function PhoneNumberConverter() {}
     
-    self._DEFAULT_PHONE_NUMBER_LENGTH = 10;
+    PhoneNumberConverter._DEFAULT_PHONE_NUMBER_LENGTH = 10;
     
     /*
      * Logic for phone number formatting
@@ -18,12 +18,12 @@ function(ValidationBase) {
         }
         if (typeof value === 'string') {
             initValue = self.getExtractedNumbers(value.trim());
-            if (initValue.length !== self._DEFAULT_PHONE_NUMBER_LENGTH) {
+            if (initValue.length !== PhoneNumberConverter._DEFAULT_PHONE_NUMBER_LENGTH) {
                 return value;
             }
         } else if (typeof value === 'number') {
             initValue = self.getExtractedNumbers(value.toString());
-            if (initValue.length !== self._DEFAULT_PHONE_NUMBER_LENGTH) {
+            if (initValue.length !== PhoneNumberConverter._DEFAULT_PHONE_NUMBER_LENGTH) {
                 return value;
             }
         } else {

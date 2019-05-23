@@ -17,7 +17,7 @@ function(ValidationBase) {
             return formattedValue;
         }
         if (typeof value === 'string') {
-            initValue = self.getExtractedNumbers(value);
+            initValue = self.getExtractedNumbers(value.trim());
             if (initValue.length !== self._DEFAULT_PHONE_NUMBER_LENGTH) {
                 return value;
             }

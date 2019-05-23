@@ -22,7 +22,7 @@ function(ValidationBase) {
                 return value;
             }
         } else if (typeof value === 'number') {
-            initValue = PhoneNumberConverter.getExtractedNumbers(value.toString());
+            initValue = self.getExtractedNumbers(value.toString());
             if (initValue.length !== self._DEFAULT_PHONE_NUMBER_LENGTH) {
                 return value;
             }
